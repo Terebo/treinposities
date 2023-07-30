@@ -15,3 +15,6 @@ In het config bestand moet je ook een begin en einddatum (yyyy-mm-dd) invoeren, 
 ![een voorbeeld van een goede config](./img/config.png)
 
 Omdat treinposities geen API levert kijkt dit script voor elke dag tussen de begin en einddatum of er ritten in staan door de volledige pagina te downloaden. Om het hele proces sneller te laten verlopen raad ik daarom aan "clusters" per keer te selecteren, op die manier hoef je niet te wachten op bijvoorbeeld een maand waarin je niet met de trein hebt gereist en dus alleen maar lege pagina's aan het downloaden bent. De begin en einddatum werkt ook met dezelfde begin en einddatum, dan wordt alleen die ene dag gescrapet.
+
+## Transformer
+Mocht je deze data in Excel willen gebruiken dan is de standaard output van index.mjs misschien niet het handigste. transformer.js zet de Array->Obejct structuur om tot een 2d array structuur die makkelijker door Excel ingeladen kan worden.
