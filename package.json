@@ -1,0 +1,30 @@
+{
+  "name": "treinposities",
+  "version": "1.0.0",
+  "description": "exporter voor je ritten in mijn ritten van treinposities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Terebo/treinposities.git"
+  },
+  "keywords": [
+    "trains"
+  ],
+  "author": "Terebo",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Terebo/treinposities/issues"
+  },
+  "homepage": "https://github.com/Terebo/treinposities#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "node-fetch": "^3.3.2",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5"
+  }
+}
