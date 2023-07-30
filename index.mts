@@ -6,6 +6,14 @@ import cheerio, { CheerioAPI, load } from 'cheerio';
 const config = JSON.parse(fs.readFileSync("./config.json", { encoding: "utf8" }));
 let date: Date[] = [new Date(Date.parse(config.start)), new Date(Date.parse(config.end))];
 var ritArray: ritArray[] = [];
+
+if(!fs.existsSync("./dump")) {
+fs.mkdirSync("./dump");
+}
+if(config.cookies === "") {
+    throw new Error("Je hebt geen cookies in je config staan!");
+}
+
 for (let index = date[0]; index <= date[1]; index.setDate(index.getDate() + 1)) {
     const response = await fetch('https://treinposities.nl/mijnritten/' + lib.parseDate(index), { headers: { cookie: config.cookies } });
     const body = await response.text();
